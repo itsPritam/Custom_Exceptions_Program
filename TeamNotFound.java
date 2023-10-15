@@ -21,13 +21,14 @@ public class TeamNotFound extends Exception {
 			System.out.print(msg);
 			String teamName = sc.nextLine();
 
-			if (s.contains(teamName)) {
-
+			for(String temp :s ) {
+				if(temp.equalsIgnoreCase(teamName))
 				return teamName;
 
-			} else {
-				throw new TeamNotFound("Entered team is not a part of IPL Season 4");
-			}
+			} 
+
+			throw new TeamNotFound("Entered team is not a part of IPL Season 4");
+			
 
 		}
 
